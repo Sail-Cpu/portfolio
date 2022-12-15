@@ -1,0 +1,90 @@
+.hero-banner{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    max-height: 720px;
+}
+.hero-banner-contents{
+    display: flex;
+    position: relative;
+    top: 180px;
+    float: right;
+    width: 80%;
+}
+.hero-banner-contents-left{
+    display: flex;
+    justify-content: space-around;
+
+}
+.hero-banner-contents-logo{
+    z-index: 1;
+    position: relative;
+    top: 45px;
+    width: 130px;
+    height: 130px;
+    background-image: url('../assets/img/star.png');
+    background-size: cover;
+    animation: logo-rotate 8s infinite linear;
+}
+@keyframes logo-rotate {
+    from{
+        transform: rotate(0deg);
+    }to{
+        transform: rotate(360deg);
+    }
+}
+.hero-banner-contents-text{
+    margin-left: -100px;
+    width: 60%;
+}
+.hero-banner-contents-text h1{
+    margin-left: -25px;
+    font-size: 70px;
+}
+.hero-banner-contents-text h2{
+    font-size: 50px;
+}
+.hero-banner-contents-text p{
+    font-size: 27px;
+    line-height: 32px;
+    margin-left: -20px;
+    font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace; 
+}
+.hero-banner-buttons-container{
+    margin-left: -15px;
+}
+.hero-banner-buttons-container button{
+    border: 3px solid #4400FF;
+    border-radius: 10px;
+    color: #fff;
+    padding: 13px 25px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.hero-banner-button-left{
+    background-color: #4400ff;
+}
+.hero-banner-button-right{
+    background: none;
+}
+.hero-banner-button-left:hover{
+    background-color: #4400ff5e;
+}
+.hero-banner-button-right:hover{
+    background-color: #4400ff5e;
+}
+
+.hero-banner-contents-right{
+    display: flex;
+    align-items: center;
+}
+.hero-banner-contents-right > img{
+    height: 300px;
+}
+
+.welcome-container{
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+}
