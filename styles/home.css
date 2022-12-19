@@ -5,6 +5,19 @@
     min-height: 600px;
     max-height: 720px;
 }
+.hero-banner-background-image{
+    position: absolute;
+    width: 100%;
+    height: 140%;
+    background-size: 130%;
+    background-image: url('https://wallpaperaccess.com/full/1779016.jpg');
+    opacity: 0.35;
+}
+.hero-banner-background-color{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(41, 43, 70, 0) 60.2%, #292B46 100%);
+}
 .hero-banner-contents{
     display: flex;
     position: relative;
@@ -25,7 +38,14 @@
     height: 160px;
     background-image: url('../assets/img/star.png');
     background-size: cover;
-    animation: logo-rotate 8s infinite linear;
+    animation: logo-rotate 8s infinite linear, startOpacity 1.5s ease-in-out;
+}
+@keyframes startOpacity {
+    0%{
+        opacity: 0;
+    }100%{
+        opacity: 1;
+    }
 }
 @keyframes logo-rotate {
     from{
@@ -39,18 +59,31 @@
     width: 60%;
 }
 .hero-banner-contents-text h1{
+    position: relative;
     margin-left: -25px;
     font-size: 70px;
+    animation: textAnim 0.2s ease-in-out;
+    -webkit-text-stroke: 1px rgb(255, 255, 255);
+    color: rgba(255, 255, 255, 0);
+    background: left/0 no-repeat;
+    background-size: 200%;
+    -webkit-background-clip: text;
+    background-image: url('https://c4.wallpaperflare.com/wallpaper/765/244/870/bright-stars-wallpaper-preview.jpg');
 }
 .hero-banner-contents-text h2{
+    position: relative;
     font-size: 50px;
+    animation: textAnim 0.4s ease-in-out;
 }
 .hero-banner-contents-text p{
+    position: relative;
     font-size: 27px;
     line-height: 32px;
     margin-left: -20px;
     font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace; 
+    animation: textAnim 0.6s ease-in-out;
 }
+
 .hero-banner-buttons-container{
     margin-left: -15px;
 }
@@ -64,11 +97,26 @@
     cursor: pointer;
 }
 .hero-banner-button-left{
+    position: relative;
     background-color: #4400ff;
+    animation: textAnim 0.8s ease-in-out;
 }
 .hero-banner-button-right{
+    position: relative;
     background: none;
+    animation: textAnim 1s ease-in-out;
 }
+
+@keyframes textAnim {
+    0%{
+        top: 40px;
+        opacity: 0;
+    }100%{
+        top: 0px;
+        opacity: 1;
+    }
+}
+
 .hero-banner-button-left:hover{
     background-color: #4400ff5e;
 }
@@ -79,6 +127,7 @@
 .hero-banner-contents-right{
     display: flex;
     align-items: center;
+    animation: startOpacity 2s ease-in-out;
 }
 .hero-banner-contents-right > img{
     height: 300px;
@@ -88,8 +137,23 @@
     position: absolute;
     left: 20px;
     bottom: 20px;
+    -webkit-text-stroke: 1px rgb(255, 255, 255);
+    color: rgba(255, 255, 255, 0);
+    font-size: 35px;
+    color: transparent;
+    background: linear-gradient(#fff 0 100%) left/0 no-repeat;
+    background-size: 0%;
+    -webkit-background-clip: text;
+    cursor: pointer;
+    animation: startOpacity 1.5s ease-in-out;
+}
+.welcome-container:hover{
+    background-position: 0 0;
 }
 
+.who-i-am{
+    margin-top: 200px;
+}
 .back-and-front-container{
     width: 100%;
     margin-top: 25px;
@@ -103,10 +167,10 @@
     white-space: nowrap;
     font-family: STCaiyun;
     font-size: 130px;
-    animation: slide 10s infinite linear;
+    animation: slide 30s infinite linear;
 }
 .b-a-f-reverse > span{
-    animation: slideReverse 10s infinite linear;
+    animation: slideReverse 30s infinite linear;
 }
 @keyframes slide{
     0% {
@@ -152,10 +216,35 @@
     font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace; 
     font-size: 20px;
 }
-.who-i-am-picture{
+.who-i-am-picture-container{
     width: 300px;
     height: 400px;
     border: 6px solid #fff;
+}
+.who-i-am-background-galaxie{
+    width: 100%;
+    height: 100%;
+    background-image: url('https://blogs.esa.int/space19plus/files/2019/03/nebula.jpg');
+    background-size: 300%;
+    opacity: 1;
+    background-repeat: no-repeat;
+    animation: pictureLeftToRight 200s linear infinite;
+}
+.who-i-am-picture-container .picture{
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/img/picture.png');
+    opacity: 0.32;
+    background-size: cover;
+}
+@keyframes pictureLeftToRight {
+    0% {
+        background-position: 0%;
+    }50%{
+        background-position: 80%;
+    }100%{
+        background-position: 0%;
+    }
 }
 
 .skills{
