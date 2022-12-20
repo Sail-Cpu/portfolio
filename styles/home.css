@@ -1,24 +1,30 @@
 .hero-banner{
     position: relative;
+    top: 0;
     width: 100%;
-    height: 100vh;
-    min-height: 600px;
-    max-height: 720px;
+    height: 1200px;
 }
 .hero-banner-background-image{
     position: absolute;
     width: 100%;
-    height: 140%;
-    background-size: 130%;
+    height: 200vh;
+    background-size: 180%;
+    background-position: center;
     background-image: url('https://wallpaperaccess.com/full/1779016.jpg');
     opacity: 0.35;
 }
 .hero-banner-background-color{
     width: 100%;
     height: 100%;
-    background: linear-gradient(180deg, rgba(41, 43, 70, 0) 60.2%, #292B46 100%);
+    background: linear-gradient(180deg, rgba(41, 43, 70, 0) 65.2%, #292B46 100%);
+}
+.hero-banner-container{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
 }
 .hero-banner-contents{
+    z-index: 1;
     display: flex;
     position: relative;
     top: 180px;
@@ -31,7 +37,6 @@
 
 }
 .hero-banner-contents-logo{
-    z-index: 1;
     position: relative;
     top: 35px;
     width: 160px;
@@ -68,7 +73,7 @@
     background: left/0 no-repeat;
     background-size: 200%;
     -webkit-background-clip: text;
-    background-image: url('https://c4.wallpaperflare.com/wallpaper/765/244/870/bright-stars-wallpaper-preview.jpg');
+    background-image: url('https://img.freepik.com/free-photo/vibrant-night-sky-with-stars-nebula-galaxy_146671-19188.jpg?w=2000');
 }
 .hero-banner-contents-text h2{
     position: relative;
@@ -151,12 +156,15 @@
     background-position: 0 0;
 }
 
+main{
+    position: relative;
+}
+
 .who-i-am{
-    margin-top: 200px;
+   
 }
 .back-and-front-container{
     width: 100%;
-    margin-top: 25px;
 }
 .back-and-front-container {
     overflow: hidden;

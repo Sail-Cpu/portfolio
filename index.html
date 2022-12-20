@@ -6,52 +6,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="styles/home.css" rel="stylesheet">
     <link href="styles/settings.css" rel="stylesheet">
+    <link href="styles/menu.css" rel="stylesheet">
     <title>Portfolio</title>
 </head>
 <body>
-    <main>
         <header>
             <nav>
                 <ul class="nav-left">
                     SIGNATURE
                 </ul>
                 <ul class="nav-right">
-                    <li>ACCUEIL</li>
-                    <li>A PROPOS</li>
-                    <li>COMPETENCES</li>
-                    <li>PROJETS</li>
-                    <li>ME CONTACTER</li>
+                    <div class="toogle-nav"></div>
                 </ul>
             </nav>
+            <div class="menu-container">
+                <div>
+                    <span>QUI SUIS-JE</span>
+                </div>
+                <div>
+                    <span>COMPETENCES</span>
+                </div>
+                <div>
+                    <span>PROJETS</span>
+                </div>
+                <div>
+                    <span>ME CONTACTER</span>
+                </div>
+            </div>
         </header>
         <section class="hero-banner">
             <div class="hero-banner-background-image">
                 <div class="hero-banner-background-color"></div>
             </div>
-            <div class="hero-banner-contents">
-                <div class="hero-banner-contents-left">
-                    <div class="hero-banner-contents-logo"></div>
-                    <div class="hero-banner-contents-text">
-                        <h1>SOFIANE LASOA</h1>
-                        <h2>Développeur Web</h2>
-                        <p>Véritablement passionné par le développement web 
-                            je suis actuellement à la recherche d’un 
-                            stage dans ce domaine
-                        </p>
-                        <div class="hero-banner-buttons-container">
-                            <button class="hero-banner-button-left">ECRIVER MOI</button>
-                            <button class="hero-banner-button-right">TELECHARGER MON CV</button>
+            <div class="hero-banner-container">
+                <div class="hero-banner-contents">
+                    <div class="hero-banner-contents-left">
+                        <div class="hero-banner-contents-logo"></div>
+                        <div class="hero-banner-contents-text">
+                            <h1>SOFIANE LASOA</h1>
+                            <h2>Développeur Web</h2>
+                            <p>Véritablement passionné par le développement web 
+                                je suis actuellement à la recherche d’un 
+                                stage dans ce domaine
+                            </p>
+                            <div class="hero-banner-buttons-container">
+                                <button class="hero-banner-button-left">ECRIVER MOI</button>
+                                <button class="hero-banner-button-right">TELECHARGER MON CV</button>
+                            </div>
+                        </div>
+                        <div class="hero-banner-contents-right">
+                            <img src="./assets/img/sail.png" />
                         </div>
                     </div>
-                    <div class="hero-banner-contents-right">
-                        <img src="./assets/img/sail.png" />
-                    </div>
+                </div>
+                <div class="welcome-container">
+                    <h2>Bienvenu sur mon portfolio</h2>
                 </div>
             </div>
-            <div class="welcome-container">
-                <h2>Bienvenu sur mon portfolio</h2>
-            </div>
         </section>
+        <main>
         <section class="who-i-am">
             <div class="back-and-front-container">
                 <span>FRONT AND BACK AND&nbsp;</span>
@@ -148,6 +161,7 @@
             </div>
         </section>
     </main>
-    <script src="./js/index.js"></script>
+    <script src="./js/hero.js"></script>
+    <script src="./js/menu.js"></script>
 </body>
 </html>
