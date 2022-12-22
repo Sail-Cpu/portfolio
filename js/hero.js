@@ -13,7 +13,7 @@ window.addEventListener("scroll", () => {
     if(percentage <= 110){
         console.log(percentage)
         welcome.style.backgroundSize = percentage + "%";
-        heroBannerImage.style.backgroundSize = (180 + percentage) + "%";
+        heroBannerImage.style.backgroundSize = (145 + (percentage * 0.3)) + "%";
         sofianeLasoa.style.backgroundPosition = percentage + "%";
     }
 

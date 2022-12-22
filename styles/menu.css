@@ -6,17 +6,51 @@ header{
     right: 0;
 }
 header nav{
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    overflow: hidden;
     padding: 22px;
     box-sizing: border-box;
     transition: all 0.2s;
 }
-header nav.active{
+
+header nav::after{
+    position: absolute;
+    opacity: 0.5;
+    z-index: -1;
+    right: -100%;
+    top: 0;
+    content: '';
+    width: 50%;
+    height: 100%;
+    border-radius: 80%;
     background-color: #4400FF;
+    transition: all 0.7s ease;
+}
+header nav::before{
+    position: absolute;
+    opacity: 0.5;
+    z-index: -1;
+    left: -100%;
+    top: 0;
+    content: '';
+    width: 50%;
+    height: 100%;
+    border-radius: 80%;
+    background-color: #4400FF;
+    transition: all 0.7s ease;
 }
 
+header nav.active::before{
+    left: 0px;
+    border-radius: 0;
+}
+header nav.active::after{
+    right: 0px;
+    border-radius: 0;
+}
 header nav .toogle-nav{
     width: 25px;
     height: 25px;
@@ -30,31 +64,48 @@ header nav .toogle-nav.active{
     transform: rotate(-180deg);
 }
 
-.menu-container{
+.menu{
+    display: none;
+}
+.menu.active{
     display: flex;
+    animation: opacity 0.3s ease-out;
+    transition: all 0.3s;
+}
+.menu.disactive{
     opacity: 0;
-    z-index: -1;
-    position: fixed;
-    left: 0;
-    width: 100%;
-    height: 300px;
-    background-color: #141414;
-    transition: all 0.2s;
 }
-.menu-container.active{
-    opacity: 1;
-    
+@keyframes opacity {
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
 }
-.menu-container > div{
+.menu > li{
+    position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: -webkit-fill-available;
-    font-size: 23px;
-    font-weight: 600;
+    height: 24px;
+    overflow: hidden;
+    margin: 0 20px;
     cursor: pointer;
+    transition: all 0.3s;
+    color: rgb(212, 212, 212);
 }
-.menu-container > div:hover{
-    background-color: #4400ff3a;
+.menu > li:hover{
+    color: #fff;
+}
+.menu > li::after{
+    position: absolute;
+    left: -100%;
+    top: 22px;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: rgb(213, 34, 34);
+    transition: all 0.3s;
+}
+.menu > li:hover::after{
+    left: 0px;
 }
