@@ -2,13 +2,13 @@
     position: relative;
     top: 0;
     width: 100%;
-    height: 1200px;
+    height: 1000px;
 }
 .hero-banner-background-image{
-    position: absolute;
+    position: fixed;
     width: 100%;
-    height: 1300px;
-    background-size: 145%;
+    height: 100vh;
+    background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
     background-image: url('https://www.mural-wallpaper.com/wp-content/uploads/2021/12/A-SFU11.jpg');

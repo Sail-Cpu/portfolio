@@ -63,13 +63,12 @@ header nav .toogle-nav.active{
     background-color: #fff;
     transform: rotate(-180deg);
 }
-
 .menu{
     display: none;
+    animation: opacity 0.3s ease-out;
 }
 .menu.active{
     display: flex;
-    animation: opacity 0.3s ease-out;
     transition: all 0.3s;
 }
 .menu.disactive{
@@ -108,4 +107,103 @@ header nav .toogle-nav.active{
 }
 .menu > li:hover::after{
     left: 0px;
+}
+
+.contact-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100px;
+    width: 100%;
+    height: 500px;
+    background-color: #5154ad;
+}
+.contact-block{
+    position: relative;
+    padding: 30px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    height: 250px;
+    border: 3px solid #1D1D1D;
+    cursor: pointer;
+    font-size: 25px;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+.contact-block > h1{
+    position: absolute;
+    margin-top: 15px;
+    color: #1D1D1D;
+}
+.contact-block.active{
+    background-color: #1D1D1D;
+    flex-grow: 3;
+}
+.contact-block-content{
+    position: absolute;
+    padding: 30px;
+    box-sizing: border-box;
+    display: none;
+    flex-direction: column;
+    min-width: 300px;
+    width: 100%;
+    height: 100%;
+}
+.contact-block-content.active{
+    display: flex;
+}
+.contact-block-middle{
+    position: absolute;
+    top: 50px;
+    margin-top: 10px;
+    width: 100%;
+    font-size: 25px;
+    animation: top2 1s ease;
+}
+.contact-block-content.active .contact-block-top{
+    position: absolute;
+    top: 30px;
+    animation: top 0.5s ease;
+}
+@keyframes top {
+    from{
+        top: 50px;
+    }to{
+        top: 30px;
+    }
+}
+@keyframes top2 {
+    from{
+        top: 70px;
+    }to{
+        top: 50px;
+    }
+}
+.contact-block-top > span{
+    font-size: 18px;
+}
+.contact-block-content p{
+    margin: 0px;
+    transition: all 3s ease;
+}
+.contact-block-content > button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: #4400FF;
+    border: none;
+    cursor: pointer;
+}
+.contact-block-content > button > img{
+    width: 65%;
+    transform: rotate(150deg);
 }
