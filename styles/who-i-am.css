@@ -1,0 +1,92 @@
+.back-and-front-container{
+    width: 100%;
+}
+.back-and-front-container {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+}
+.back-and-front-container > span{
+    white-space: nowrap;
+    font-family: STCaiyun;
+    font-size: 130px;
+    animation: slide 30s infinite linear;
+}
+.b-a-f-reverse > span{
+    animation: slideReverse 30s infinite linear;
+}
+@keyframes slide{
+    0% {
+        transform: translateX(-100%);
+    }100% {
+        transform: translateX(0%);
+    }
+}
+@keyframes slideReverse{
+    0% {
+        transform: translateX(0%);
+    }100% {
+        transform: translateX(-100%);
+    }
+}
+.who-i-am-contents-container{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.who-i-am-contents{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+}
+.who-i-am-top{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    font-size: 25px;
+}
+.who-i-am-top > img{
+    margin: -50px;
+    width: 100px;
+    margin-right: 10px;
+    animation: logo-rotate 20s linear infinite;
+}
+.who-i-am-text{
+    width: 100%;
+    font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace; 
+    line-height: 23px;
+    font-size: 20px;
+}
+.who-i-am-picture-container{
+    width: 300px;
+    height: 400px;
+    border: 4px solid #fff;
+}
+.who-i-am-background-galaxie{
+    width: 100%;
+    height: 100%;
+    background-image: url('https://blogs.esa.int/space19plus/files/2019/03/nebula.jpg');
+    background-size: 300%;
+    opacity: 1;
+    background-repeat: no-repeat;
+    animation: pictureLeftToRight 200s linear infinite;
+}
+.who-i-am-picture-container .picture{
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/img/picture.png');
+    opacity: 0.32;
+    background-size: cover;
+}
+@keyframes pictureLeftToRight {
+    0% {
+        background-position: 0%;
+    }50%{
+        background-position: 80%;
+    }100%{
+        background-position: 0%;
+    }
+}

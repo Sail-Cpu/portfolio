@@ -1,0 +1,158 @@
+.hero-banner{
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 1000px;
+}
+.hero-banner-background-image{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('https://www.mural-wallpaper.com/wp-content/uploads/2021/12/A-SFU11.jpg');
+    opacity: 0.35;
+}
+.hero-banner-background-color{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(41, 43, 70, 0) 65.2%, #292B46 100%);
+}
+.hero-banner-container{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+}
+.hero-banner-contents{
+    display: flex;
+    position: relative;
+    top: 180px;
+    float: right;
+    width: 80%;
+}
+.hero-banner-contents-left{
+    display: flex;
+    justify-content: space-around;
+
+}
+.hero-banner-contents-logo{
+    position: relative;
+    top: 35px;
+    width: 160px;
+    height: 160px;
+    background-image: url('../assets/img/star.png');
+    background-size: cover;
+    animation: logo-rotate 8s infinite linear, startOpacity 1.5s ease-in-out;
+}
+@keyframes startOpacity {
+    0%{
+        opacity: 0;
+    }100%{
+        opacity: 1;
+    }
+}
+@keyframes logo-rotate {
+    from{
+        transform: rotate(0deg);
+    }to{
+        transform: rotate(360deg);
+    }
+}
+.hero-banner-contents-text{
+    margin-left: -100px;
+    width: 60%;
+}
+.hero-banner-contents-text h1{
+    position: relative;
+    margin-left: -25px;
+    font-size: 70px;
+    animation: textAnim 0.2s ease-in-out;
+    -webkit-text-stroke: 1px rgb(255, 255, 255);
+    color: rgba(255, 255, 255, 0);
+    background: left/0 no-repeat;
+    background-size: 200%;
+    -webkit-background-clip: text;
+    background-image: url('https://img.freepik.com/free-photo/vibrant-night-sky-with-stars-nebula-galaxy_146671-19188.jpg?w=2000');
+}
+.hero-banner-contents-text h2{
+    position: relative;
+    font-size: 50px;
+    animation: textAnim 0.4s ease-in-out;
+}
+.hero-banner-contents-text p{
+    position: relative;
+    font-size: 27px;
+    line-height: 32px;
+    margin-left: -20px;
+    font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace; 
+    animation: textAnim 0.6s ease-in-out;
+}
+
+.hero-banner-buttons-container{
+    margin-left: -15px;
+}
+.hero-banner-buttons-container button{
+    border: 3px solid #4400FF;
+    border-radius: 10px;
+    color: #fff;
+    padding: 13px 25px;
+    margin-right: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.hero-banner-button-left{
+    position: relative;
+    background-color: #4400ff;
+    animation: textAnim 0.8s ease-in-out;
+}
+.hero-banner-button-right{
+    position: relative;
+    background: none;
+    animation: textAnim 1s ease-in-out;
+}
+
+@keyframes textAnim {
+    0%{
+        top: 40px;
+        opacity: 0;
+    }100%{
+        top: 0px;
+        opacity: 1;
+    }
+}
+
+.hero-banner-button-left:hover{
+    background-color: #4400ff5e;
+}
+.hero-banner-button-right:hover{
+    background-color: #4400ff5e;
+}
+
+.hero-banner-contents-right{
+    display: flex;
+    align-items: center;
+    animation: startOpacity 2s ease-in-out;
+}
+.hero-banner-contents-right > img{
+    height: 300px;
+}
+
+.welcome-container{
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    -webkit-text-stroke: 1px rgb(255, 255, 255);
+    color: rgba(255, 255, 255, 0);
+    font-size: 35px;
+    color: transparent;
+    background: linear-gradient(#fff 0 100%) left/0 no-repeat;
+    background-size: 0%;
+    -webkit-background-clip: text;
+    cursor: pointer;
+    animation: startOpacity 1.5s ease-in-out;
+}
+.welcome-container:hover{
+    background-position: 0 0;
+}
