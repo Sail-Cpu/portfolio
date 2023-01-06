@@ -51,6 +51,11 @@ header nav.active::after{
     right: 0px;
     border-radius: 0;
 }
+@media screen and (max-width: 500px) {
+    header nav.active .nav-left{
+        display: none;
+    }   
+}
 header nav .toogle-nav{
     width: 25px;
     height: 25px;
@@ -85,6 +90,7 @@ header nav .toogle-nav.active{
     position: relative;
     display: flex;
     align-items: center;
+    justify-content: center;
     height: 24px;
     overflow: hidden;
     margin: 0 20px;
@@ -109,13 +115,18 @@ header nav .toogle-nav.active{
     left: 0px;
 }
 
+@media screen and (max-width: 800px) {
+    .menu{
+        flex-direction: column;
+    }
+}
+
 .contact-container{
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 100px;
-    width: 100%;
-    height: 500px;
+    padding: 10vw 0px;
     background-color: #5154ad;
 }
 .contact-block{
@@ -126,12 +137,15 @@ header nav .toogle-nav.active{
     align-items: center;
     justify-content: center;
     flex-grow: 1;
-    height: 250px;
+    height: 15vw;
     border: 3px solid #1D1D1D;
     cursor: pointer;
-    font-size: 25px;
+    font-size: 1.6vw;
     color: #fff;
     transition: all 0.5s ease;
+}
+.contact-block-margin{
+    margin-right: 30px;
 }
 .contact-block > h1{
     position: absolute;
@@ -206,4 +220,38 @@ header nav .toogle-nav.active{
 .contact-block-content > button > img{
     width: 65%;
     transform: rotate(150deg);
+}
+
+@media screen and (max-width: 800px) {
+    .contact-container{
+        flex-direction: column;
+    }
+    .contact-block{
+        width: 100%;
+    }
+    .contact-block-margin{
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+    .contact-block-middle{
+        display: none;
+    }
+    .contact-block-content.active{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+    }
+    .contact-block-content.active .contact-block-top{
+        position: relative;
+        top: 0;
+        animation: none;
+    }
+    .contact-block-content > button{
+        position: relative;
+        right: 0;
+        top: 0;
+        width: 35px;
+        height: 35px;
+    }
 }

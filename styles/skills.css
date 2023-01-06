@@ -6,7 +6,7 @@
 }
 .skills > h1{
     margin: 40px 0;
-    font-size: 50px;
+    font-size: 5vw;
 }
 .skills > hr{
     width: 50%;
@@ -64,6 +64,7 @@
 }
 .skills-container h1{
     margin-top: 10px;
+
 }
 .skills-contents{
     margin-top: 20px;
@@ -75,4 +76,26 @@
 .skills-contents img{
     height: 110px;
     margin: 0 30px;
+}
+
+@media screen and (max-width: 880px) {
+    .skills-container{
+        flex-direction: column;
+    }
+    .skills > hr{
+        display: none;
+    }
+    .skills-middle{
+        display: none;
+    }
+    .skills-left{
+        width: auto;
+        margin: 0;
+        height: auto;
+    }
+    .skills-right{
+        width: auto;
+        height: auto;
+        margin: 0;
+    }
 }

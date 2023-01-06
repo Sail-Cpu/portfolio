@@ -30,10 +30,11 @@ const body = document.querySelector('body');
 window.addEventListener('scroll', () => {
     let position = 0 - (footer.getBoundingClientRect().top - window.innerHeight);
     let size = footer.getBoundingClientRect().height;
-    percentage = position * 70 / size;
+    let percentage = position * 100 / size;
     if(percentage > 0){
-        body.style.padding = '0 ' + percentage + 'px';
-        body.style.boxShadow = '0 0 0 ' + (percentage + 0.2) + 'px #5154ad inset';
+        console.log(percentage)
+        body.style.padding = '0 ' + (percentage / 10)  + 'vw';
+        body.style.boxShadow = '0 0 0 ' + (percentage / 10) + 'vw #5154ad inset';
     }else{
         body.style.padding= 0 + 'px';
         body.style.boxShadow = '0 0 0 ' + (0) + 'px #5154ad inset';
