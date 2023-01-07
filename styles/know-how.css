@@ -1,0 +1,49 @@
+.know-how{
+    margin-top: 100px;
+    width: 100%;
+}
+.know-how-content{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.know-how-card{
+    position: relative;
+    width: 220px;
+    height: 340px;
+    margin: 20px;
+}
+.know-how-card-background{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url('https://images.unsplash.com/photo-1445905595283-21f8ae8a33d2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHx8&w=1000&q=80');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+    z-index: -1;
+    border-radius: 10px;
+}
+.know-how-card-content{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.know-how-card-top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60%;
+}
+.know-how-card-top > img{
+    width: 80%;
+}
+.know-how-card-bottom{
+    text-align: center;
+}
+.know-how-card-bottom > P{
+    color: rgb(205, 205, 205);
+    line-height: 23px;
+}

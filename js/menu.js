@@ -33,8 +33,8 @@ window.addEventListener('scroll', () => {
     let percentage = position * 100 / size;
     if(percentage > 0){
         console.log(percentage)
-        body.style.padding = '0 ' + (percentage / 10)  + 'vw';
-        body.style.boxShadow = '0 0 0 ' + (percentage / 10) + 'vw #5154ad inset';
+        body.style.padding = '0 ' + (percentage / 15)  + 'vw';
+        body.style.boxShadow = '0 0 0 ' + (percentage / 15) + 'vw #5154ad inset';
     }else{
         body.style.padding= 0 + 'px';
         body.style.boxShadow = '0 0 0 ' + (0) + 'px #5154ad inset';
