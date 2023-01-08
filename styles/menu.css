@@ -90,10 +90,13 @@ header nav .toogle-nav.active{
     overflow: hidden;
     margin: 0 20px;
     cursor: pointer;
-    transition: all 0.3s;
-    color: rgb(212, 212, 212);
 }
-.menu > li:hover{
+.menu > li > a{
+    color: rgb(212, 212, 212);
+    text-decoration: none;
+    transition: all 0.3s;
+}
+.menu > li > a:hover{
     color: #fff;
 }
 .menu > li::after{

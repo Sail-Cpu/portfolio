@@ -1,14 +1,14 @@
-.skills{
+#skills{
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.skills > h1{
+#skills > h1{
     margin: 40px 0;
     font-size: 5vw;
 }
-.skills > hr{
+#skills > hr{
     width: 50%;
     border-style: solid;
     border-top-width: 1px;
@@ -82,7 +82,7 @@
     .skills-container{
         flex-direction: column;
     }
-    .skills > hr{
+    #skills > hr{
         display: none;
     }
     .skills-middle{
