@@ -93,7 +93,7 @@
 .hero-banner-buttons-container{
     margin-left: -15px;
 }
-.hero-banner-buttons-container .button{
+.hero-banner-buttons-container a{
     border: 3px solid #4400FF;
     border-radius: 10px;
     color: #fff;
@@ -103,6 +103,8 @@
     text-decoration: none;
     cursor: pointer;
     transition: all 0.2s;
+    margin-bottom: 10px;
+    display: inline-block;
 }
 .hero-banner-button-left{
     position: relative;
@@ -206,5 +208,10 @@
     .hero-banner-buttons-container button{
         padding: 10px 15px;
         font-size: 10px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .welcome-container{
+        display: none;
     }
 }

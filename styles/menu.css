@@ -51,11 +51,6 @@ header nav.active::after{
     right: 0px;
     border-radius: 0;
 }
-@media screen and (max-width: 500px) {
-    header nav.active .nav-left{
-        display: none;
-    }   
-}
 header nav .toogle-nav{
     width: 25px;
     height: 25px;
@@ -115,11 +110,42 @@ header nav .toogle-nav.active{
     left: 0px;
 }
 
-@media screen and (max-width: 800px) {
-    .menu{
-        flex-direction: column;
+
+.switch-portfolio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 130px;
+    height: 70px;
+    border-radius: 40px;
+    border: 5px solid black;
+    background-color: #4400ff;
+    text-decoration: none;
+    color: #fff;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 100;
+}
+.switch-portfolio:hover > span{
+    animation: none;
+}
+.switch-portfolio > span{
+    font-size: 25px;
+    font-weight: 700;
+    animation: slide 3s infinite linear;
+}
+
+@keyframes slide{
+    0% {
+        transform: translateX(-100%);
+    }100% {
+        transform: translateX(0%);
     }
 }
+
 
 .contact-container{
     display: flex;
@@ -149,7 +175,6 @@ header nav .toogle-nav.active{
 }
 .contact-block > h1{
     position: absolute;
-    margin-top: 15px;
     color: #1D1D1D;
 }
 .contact-block.active{
@@ -253,5 +278,19 @@ header nav .toogle-nav.active{
         top: 0;
         width: 35px;
         height: 35px;
+    }
+    .menu{
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 500px) {
+    header nav.active .nav-left{
+        display: none;
+    }
+    header nav.active{
+        justify-content: center;
+    }    
+    header nav.active .menu{
+        width: -webkit-fill-available;
     }
 }
