@@ -32,7 +32,6 @@ window.addEventListener('scroll', () => {
     let size = footer.getBoundingClientRect().height;
     let percentage = position * 100 / size;
     if(percentage > 0){
-        console.log(percentage)
         footer.style.padding = '80px ' + (percentage / 20)  + 'vw';
         body.style.boxShadow = '0 0 0 ' + (percentage / 20) + 'vw #5154ad inset';
     }else{

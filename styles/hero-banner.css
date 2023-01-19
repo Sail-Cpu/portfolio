@@ -12,7 +12,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url('https://www.mural-wallpaper.com/wp-content/uploads/2021/12/A-SFU11.jpg');
+    background-image: url('../assets/img/hero-banner.jpg');
     opacity: 0.35;
 }
 .hero-banner-background-color{

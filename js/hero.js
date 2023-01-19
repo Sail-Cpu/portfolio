@@ -12,7 +12,6 @@ window.addEventListener("scroll", () => {
     let percentage = 100 - (main.getBoundingClientRect().top - window.innerHeight) * 100 / (position - window.innerHeight);
     if(percentage <= 100){
         welcome.style.backgroundSize = percentage + "%";
-        //heroBannerImage.style.backgroundSize = (100 + (percentage * 0.4)) + "%";
         heroBannerImage.style.transform = 'scale(' + (1 +  (percentage * 0.4 / 100)) + ")";
         sofianeLasoa.style.backgroundPosition = percentage + "%";
     }else{
@@ -20,7 +19,6 @@ window.addEventListener("scroll", () => {
         heroBannerImage.style.transform = 'scale(' + (1 +  (100 * 0.4 / 100)) + ")";
         sofianeLasoa.style.backgroundPosition = 100 + "%";
     }
-
     if(percentage > 100){
         heroBanner.style.position = "absolute";
         heroBanner.style.bottom = "0";
