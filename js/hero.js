@@ -3,7 +3,7 @@ const heroBannerImage = document.querySelector('.hero-banner-background-image');
 const main = document.querySelector('main')
 const whoIAm = document.querySelector('.who-i-am');
 const welcome = document.querySelector('.welcome-container');
-const sofianeLasoa = document.querySelector('.hero-banner h1');
+const sofianeLasoa = document.querySelector('#hero-banner h1');
 const backgroundSpace = document.querySelector('.hero-banner-background-image');
 
 const position = main.offsetTop;
