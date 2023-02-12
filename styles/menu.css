@@ -91,12 +91,12 @@ header nav .toogle-nav.active{
     margin: 0 20px;
     cursor: pointer;
 }
-.menu > li > a{
+header nav a{
     color: rgb(212, 212, 212);
     text-decoration: none;
     transition: all 0.3s;
 }
-.menu > li > a:hover{
+nav > li > a:hover{
     color: #fff;
 }
 .menu > li::after{
@@ -112,6 +112,13 @@ header nav .toogle-nav.active{
 .menu > li:hover::after{
     left: 0px;
 }
+
+.nav-left{
+    font-size: 23px;
+    font-weight: 400;
+}
+
+
 
 
 .switch-portfolio{
