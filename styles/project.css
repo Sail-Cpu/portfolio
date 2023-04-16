@@ -62,15 +62,19 @@
     background: none;
     padding: 20px 30px;
     border-radius: 30px;
+    border: 1px solid #4400FF;
     margin-top: 50px;
     cursor: pointer;
     transition: 0.5s ease;
     overflow: hidden;
 }
-.project-left  button > img{
+.project-left  button > .arrow{
     width: 25px;
     transform: rotate(-30deg);
     margin-left: 20px;
+}
+.project-left button > .icon{
+    width: 20px;
 }
 .project-left button:hover{
     background-color: #4400FF;
